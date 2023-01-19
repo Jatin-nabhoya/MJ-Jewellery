@@ -1,0 +1,247 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="apple-touch-icon" href="assets/images/favicon.png"/>
+    <link rel="shortcut icon" href="assets/images/favicon.ico"/>
+
+    <!-- CSS FILES HERE -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/css/vendors/plugins.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <!-- endinject -->
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <form id="form1" runat="server"> 
+    <div>
+          <!-- Preloader -->
+    <div class="tm-preloader">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="tm-preloader-logo">
+                        <h2>MJ-Jewellery</h2>
+                    </div>
+                    <span class="tm-preloader-progress"></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!--// Preloader -->
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="wrapper">
+
+        <!-- Header -->
+        <div class="tm-header tm-header-sticky">
+
+            <!-- Header Top Area -->
+            <div class="tm-header-toparea bg-black">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8 col-12">
+                            <ul class="tm-header-info">
+                                <li><a href="tel:9173026449"><i class="ion-ios-telephone"></i>9173026449</a></li>
+                                <li><a href="mailto:mmangukiya927@rku.ac.in"><i
+                                            class="ion-android-mail"></i>mmangukiya927@rku.ac.in</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="tm-header-options">
+                                <div class="tm-dropdown tm-header-links">
+                                    <button>My Account</button>
+                                    <ul>
+                                        <li><a href="My-account.aspx">My Account</a></li>
+                                        <li><a href="Login.aspx">Login/Register</a></li>
+                                        <li><a href="Cart.aspx">Shopping Cart</a></li>
+                                        <li><a href="Wishlist.aspx">Wishlist</a></li>
+                                        <!--<li><a href="checkout.html">Checkout</a></li>-->
+                                    </ul>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// Header Top Area -->
+
+            <!-- Header Middle Area -->
+            <div class="tm-header-middlearea bg-white">
+                <div class="container">
+                    <div class="tm-mobilenav"></div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-6 order-1 order-lg-1">
+                            <a href="Index.aspx" class="tm-header-logo">
+                                <h2>MJ-Jewellery</h2>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-12 order-3 order-lg-2">
+                            <div class="tm-header-search">
+                                <input type="text" placeholder="Search product..."/>
+                                <button><i class="ion-android-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6 order-2 order-lg-3">
+                            <ul class="tm-header-icons">
+                                <li><a href="Wishlist.aspx"><i
+                                            class="ion-android-favorite-outline"></i><span>0</span></a></li>
+                                <li><a href="Cart.aspx"><i class="ion-bag"></i><span>0</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// Header Middle Area -->
+
+            <!-- Header Bottom Area -->
+            <div class="tm-header-bottomarea bg-white">
+                <div class="container">
+                    <nav class="tm-header-nav">
+                        <ul>
+                            <li><a href="Index.aspx">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li class="tm-header-nav-dropdown"><a href="Products.aspx">All Products</a>
+                                <ul>
+                                    <li><a>Loose Moissanite</a></li>
+                                    <li><a>Engagement Rings</a></li>
+                                    <li><a>Wedding Rings</a></li>
+                                    <li><a>Earrings</a></li>
+                                </ul>
+                            </li>
+                            <!--<li><a href="contact.html">Contact</a></li>-->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!--// Header Bottom Area -->
+
+        </div>
+        <!--// Header -->
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+         <!-- Footer -->
+        <div class="tm-footer">
+
+            <!-- Instagram Photos -->
+            <ul id="instafeed" class="tm-instaphotos"></ul>
+            <!--// Instagram Photos -->
+
+            <!-- Footer Top Area -->
+            <div class="tm-footer-toparea tm-padding-section">
+                <div class="container">
+                    <div class="widgets widgets-footer row">
+
+                        <!-- Single Widget -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-widget widget-info">
+                                <a class="widget-info-logo" href="Index.aspx"><h2>MJ-Jewellery</h2>
+                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit.</p>
+                                <ul>
+                                    <li><b>Address :</b>RKU Capmus , RK University</li>
+                                    <li><b>Phone :</b><a href="tel:+91 - 9173026449">9173026449</a></li>
+                                    <li><b>Email :</b><a href="mailto:mmangukiya927@rku.ac.in">mmangukiya927@rku.ac.in</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--// Single Widget -->
+
+                        <!-- Single Widget -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-widget widget-quicklinks">
+                                <h6 class="widget-title">Useful Link</h6>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="#">Delivery Info</a></li>
+                                    <li><a href="#">Privacy & Policy</a></li>
+                                    <li><a href="#">Returns & Refunds</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--// Single Widget -->
+
+                        <!-- Single Widget -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-widget widget-quicklinks">
+                                <h6 class="widget-title">My Account</h6>
+                                <ul>
+                                    <li><a href="my-account.html">My account</a></li>
+                                    <li><a href="cart.html">Cart</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                    <li><a href="#">Newsletter</a></li>
+                                    <li><a href="#">Check out</a></li>
+                                    <li><a href="#">Frequently Questions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--// Single Widget -->
+
+                        <!-- Single Widget -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-widget widget-newsletter">
+                                <h6 class="widget-title">Join Our Newsletter</h6>
+                                <p>Get Business news, tip and solutions to
+                                    your problems from our experts.</p>
+                                <form id="tm-mailchimp-form" class="widget-newsletter-form">
+                                    <input id="mc-email" type="text" placeholder="Enter email address">
+                                    <button id="mc-submit" type="submit" class="tm-button">Subscribe Now
+                                        <b></b></button>
+                                </form>
+                                <!-- Mailchimp Alerts -->
+                                <div class="tm-mailchimp-alerts">
+                                    <div class="tm-mailchimp-submitting"></div>
+                                    <div class="mailchimp-success"></div>
+                                    <div class="tm-mailchimp-error"></div>
+                                </div>
+                                <!--// Mailchimp Alerts -->
+                            </div>
+                        </div>
+                        <!--// Single Widget -->
+
+                    </div>
+                </div>
+            </div>
+            <!--// Footer Top Area -->
+
+            <!-- Footer Bottom Area -->
+            <div class="tm-footer-bottomarea">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <p class="tm-footer-copyright">©
+                                2019. Designed by <a href="https://thememarch.com/">ThemeMarch</a></p>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="tm-footer-payment">
+                                <img src="assets/images/payment-methods.png" alt="payment methods">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// Footer Bottom Area -->
+
+        </div>
+        <!--// Footer -->
+
+        <button id="back-top-top"><i class="ion-arrow-up-c"></i></button>
+    </div>
+        </div>
+    </form>
+    <!-- JS FILES HERE -->
+    <!-- inject:js -->
+    <script src="assets/js/vendors/plugins.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- endinject -->
+</body>
+</html>
