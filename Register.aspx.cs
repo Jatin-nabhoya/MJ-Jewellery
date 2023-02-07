@@ -28,7 +28,7 @@ public partial class Register : System.Web.UI.Page
             con.Open();
             string query = "insert into dbo.Users(userName,email,password,IsActive) values(@userName,@email,@password,@IsActive)";
             SqlCommand cmd = new SqlCommand(query, con);
-            cmd.Parameters.AddWithValue("@username", register_username.Text);
+            cmd.Parameters.AddWithValue("@userName", register_username.Text);
             cmd.Parameters.AddWithValue("@email", register_email.Text);
             cmd.Parameters.AddWithValue("@password", register_password.Text);
             cmd.Parameters.AddWithValue("@IsActive", 0);
@@ -37,6 +37,11 @@ public partial class Register : System.Web.UI.Page
             register_email.Text = "";
             register_username.Text = "";
             register_password.Text = "";
+            Response.Redirect("Login.aspx");
         }
     }
+
+
+
+    
 }

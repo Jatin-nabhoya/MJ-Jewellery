@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="assets/css/vendors/plugins.min.css"/>
     <link rel="stylesheet" href="assets/css/style.css"/>
     <!-- endinject -->
+    <script src="jquery-3.6.1.min.js"></script>
     <asp:ContentPlaceHolder id="head" runat="server">
+       
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -47,27 +49,26 @@
                     <div class="row align-items-center">
                         <div class="col-lg-8 col-12">
                             <ul class="tm-header-info">
-                                <li><a href="tel:9173026449"><i class="ion-ios-telephone"></i>9173026449</a></li>
-                                <li><a href="mailto:mmangukiya927@rku.ac.in"><i
-                                            class="ion-android-mail"></i>mmangukiya927@rku.ac.in</a></li>
+                                
+                                <li><p id="Showusername" runat="server" ></p>
                             </ul>
                         </div>
                         <div class="col-lg-4 col-12">
                             <div class="tm-header-options">
-                                <div class="tm-dropdown tm-header-links">
-                                    <button>My Account</button>
-                                    <ul>
-                                        <li><a href="My-account.aspx">My Account</a></li>
-                                        <li><a href="Login.aspx">Login/Register</a></li>
-                                        <li><a href="Cart.aspx">Shopping Cart</a></li>
-                                        <li><a href="Wishlist.aspx">Wishlist</a></li>
-                                        <!--<li><a href="checkout.html">Checkout</a></li>-->
-                                    </ul>
+                                <div class="tm-header-links">
+                                    <a href="My-account.aspx" runat="server">My Account</a>
+                                    
                                 </div>
-                                
-                                
+                                <div class="tm-header-links">
+                                    <asp:Button runat="server" ID="loginBtn" OnClick="loginBtn_Click" Text="Login" />
+                                </div>
+                                <div class="tm-header-links">
+                                    <asp:Button runat="server" Visible="false" ID="logoutBtn" OnClick="logoutBtn_Click" Text="Logout" />
+                                </div>
+                               
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -92,8 +93,8 @@
                         <div class="col-lg-3 col-6 order-2 order-lg-3">
                             <ul class="tm-header-icons">
                                 <li><a href="Wishlist.aspx"><i
-                                            class="ion-android-favorite-outline"></i><span>0</span></a></li>
-                                <li><a href="Cart.aspx"><i class="ion-bag"></i><span>0</span></a></li>
+                                            class="ion-android-favorite-outline"></i><span id="wishlistNo" runat="server"></span></a></li>
+                                <li><a href="Cart.aspx"><i class="ion-bag"></i><span id="cartNo" runat="server"></span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -107,14 +108,9 @@
                     <nav class="tm-header-nav">
                         <ul>
                             <li><a href="Index.aspx">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li class="tm-header-nav-dropdown"><a href="Products.aspx">All Products</a>
-                                <ul>
-                                    <li><a>Loose Moissanite</a></li>
-                                    <li><a>Engagement Rings</a></li>
-                                    <li><a>Wedding Rings</a></li>
-                                    <li><a>Earrings</a></li>
-                                </ul>
+                            <li><a href="About.aspx">About</a></li>
+                            <li><a href="Products.aspx">All Products</a>
+                                
                             </li>
                             <!--<li><a href="contact.html">Contact</a></li>-->
                         </ul>
@@ -148,7 +144,7 @@
                                 <ul>
                                     <li><b>Address :</b>RKU Capmus , RK University</li>
                                     <li><b>Phone :</b><a href="tel:+91 - 9173026449">9173026449</a></li>
-                                    <li><b>Email :</b><a href="mailto:mmangukiya927@rku.ac.in">mmangukiya927@rku.ac.in</a></li>
+                                    <li><b>Email :</b><a href="mailto:mmangukiya927@rku.ac.in">mjjewellery@gmail.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -159,7 +155,7 @@
                             <div class="single-widget widget-quicklinks">
                                 <h6 class="widget-title">Useful Link</h6>
                                 <ul>
-                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="About.aspx">About Us</a></li>
                                     <li><a href="#">Delivery Info</a></li>
                                     <li><a href="#">Privacy & Policy</a></li>
                                     <li><a href="#">Returns & Refunds</a></li>
@@ -175,9 +171,9 @@
                             <div class="single-widget widget-quicklinks">
                                 <h6 class="widget-title">My Account</h6>
                                 <ul>
-                                    <li><a href="my-account.html">My account</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                    <li><a href="My-account.aspx">My account</a></li>
+                                    <li><a href="Cart.aspx">Cart</a></li>
+                                    <li><a href="Wishlist.aspx">Wishlist</a></li>
                                     <li><a href="#">Newsletter</a></li>
                                     <li><a href="#">Check out</a></li>
                                     <li><a href="#">Frequently Questions</a></li>
@@ -192,11 +188,11 @@
                                 <h6 class="widget-title">Join Our Newsletter</h6>
                                 <p>Get Business news, tip and solutions to
                                     your problems from our experts.</p>
-                                <form id="tm-mailchimp-form" class="widget-newsletter-form">
+                                <div id="tm-mailchimp-form" class="widget-newsletter-form">
                                     <input id="mc-email" type="text" placeholder="Enter email address">
                                     <button id="mc-submit" type="submit" class="tm-button">Subscribe Now
                                         <b></b></button>
-                                </form>
+                                </div>
                                 <!-- Mailchimp Alerts -->
                                 <div class="tm-mailchimp-alerts">
                                     <div class="tm-mailchimp-submitting"></div>
@@ -219,7 +215,7 @@
                     <div class="row align-items-center">
                         <div class="col-md-7">
                             <p class="tm-footer-copyright">©
-                                2019. Designed by <a href="https://thememarch.com/">ThemeMarch</a></p>
+                                2019. Designed by <a href="About.aspx">Jatin,Meet</a></p>
                         </div>
                         <div class="col-md-5">
                             <div class="tm-footer-payment">
