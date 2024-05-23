@@ -29,6 +29,3 @@ A dynamic and user-friendly e-commerce website for selling jewellery, developed 
 - **HTML5 and CSS3**
 
 
-
-### Contact
-For support, contact [your email address].
